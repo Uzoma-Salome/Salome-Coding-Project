@@ -1,12 +1,7 @@
-document.addEventListener("DOMContentLoaded",function () 
-{
-    const menuButton =
+const menuButton =
 document.getElementById("menu-button");
-    const menuItems =
-document.getElementById("menu-items");
-  
-menuButton.addEventListener("click",function () 
-{ 
-menuItems.classList.toggle("active");
-});
+    const navMenu =
+document.getElementById("nav-menu");
+
+menuButton.addEventListener("click",() =>{navMenu.classList.toggle("active");s
 });
