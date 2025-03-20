@@ -1,7 +1,4 @@
-const menuButton =
-document.getElementById("menu-button");
-    const navMenu =
-document.getElementById("nav-menu");
+document.getElementById("menu-toggle").addEventListener("click",function()){
 
-menuButton.addEventListener("click",() =>{navMenu.classList.toggle("active");s
-});
+    document.getElementById("menu").classList.toggle("show");
+}
