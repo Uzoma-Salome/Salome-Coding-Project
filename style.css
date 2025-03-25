@@ -5,7 +5,22 @@
     box-sizing: border-box;
     font-family: Arial, sans-serif;
 }
-
+body {
+    background-image: url('background\ image.png'); /* Replace with your actual image file */
+    background-size: cover; /* Ensures the image covers the entire page */
+    background-position: center; /* Centers the image */
+    background-attachment: fixed; /* Keeps the background in place when scrolling */
+    background-repeat: repeat; /* Prevents the image from repeating */
+}
+.content {
+    background: rgba(255, 255, 255, 0.5); /* White with 80% opacity */
+    padding: 20px;
+    border-radius: 5px;
+    width: 101%;
+    margin: auto;
+    text-align: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
 /* NAVBAR (with centered logo) */
 .navbar {
     display: flex;
@@ -121,6 +136,23 @@
     cursor: pointer;
     border-radius: 5px;
     margin-top: 10px;
+}
+.products {
+    display: flex;
+    flex-wrap: wrap; /* Allows products to wrap to the next row */
+    justify-content: space-between; /* Spreads products evenly */
+    padding: 20px;
+    max-width: 900px; /* Restrict max width for a neat layout */
+    margin: auto; /* Center align */
+}
+.product {
+    width: 45%; /* Make each product take 45% of the width */
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin-bottom: 20px;
+    text-align: center;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1); /* Adds a slight shadow */
+    border-radius: 8px; /* Rounded corners */
 }
 
 
