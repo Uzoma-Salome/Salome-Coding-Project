@@ -151,3 +151,30 @@ header {
     border-radius: 5px;
     margin-top: 10px;
 }
+/* PRODUCT SECTION */
+.products {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    text-align: center;
+}
+
+.product img {
+    width: 100px;  /* Adjust image size */
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.product button {
+    background: #ff5733;
+    color: white;
+    padding: 8px 12px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.product button:hover {
+    background: #e04d2a;
+}
