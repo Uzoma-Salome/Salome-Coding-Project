@@ -48,53 +48,38 @@ document.addEventListener("DOMContentLoaded", function () {
     // Load cart when the page loads
     loadCart();
 });
-// Assuming cart data is managed in cart.js (or localStorage or other methods)
-    // For now, an example cart is hardcoded
-    const cart = [
-        { name: "Product 1", price: 10, quantity: 2 },
-        { name: "Product 2", price: 20, quantity: 1 }
-    ];
+document.getElementById("checkout-btn").addEventListener("click", function () {
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
-    // Function to display cart in the form
-    function displayCart() {
-        let cartDetails = document.getElementById("cartDetails");
-        let cartText = "";
-
-        cart.forEach(item => {
-            cartText += `${item.name} - ${item.quantity} x $${item.price} = $${item.price * item.quantity}\n`;
-        });
-
-        cartDetails.textContent = cartText;
+    if (cart.length === 0) {
+        alert("Your cart is empty!");
+        return;
     }
 
-    // Display the cart items when the page loads
-    displayCart();
+    // Get customer details from the form
+    let name = document.getElementById("name").value;
+    let phone = document.getElementById("phone").value;
+    let email = document.getElementById("email").value;
+    let address = document.getElementById("address").value;
 
-    // Handle form submission and send details to WhatsApp when the "Checkout" button is clicked
-    document.getElementById("orderForm").onsubmit = function(event) {
-        event.preventDefault(); // Prevent form from submitting normally
+    // Prepare cart details
+    let message = `*Customer Details:*\n`;
+    message += `Name: ${name}\nPhone: ${phone}\nEmail: ${email}\nAddress: ${address}\n\n`;
 
-        // Get customer details
-        const name = document.getElementById("name").value;
-        const phone = document.getElementById("phone").value;
-        const email = document.getElementById("email").value;
-        const address = document.getElementById("address").value;
+    // Add cart items to message
+    message += `*Cart Details:*\n`;
+    cart.forEach(item => {
+        message += `\n- ${item.name} (₦${item.price} x ${item.quantity})`;
+    });
 
-        // Prepare cart details dynamically from the cart object
-        let cartText = "";
-        cart.forEach(item => {
-            cartText += `${item.name} - ${item.quantity} x $${item.price} = $${item.price * item.quantity}\n`;
-        });
+    // Calculate total
+    let total = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+    message += `\n\nTotal: ₦${total}`;
 
-        // Prepare message for WhatsApp
-        const message = `*Customer Details:*\nName: ${name}\nPhone: ${phone}\nEmail: ${email}\nAddress: ${address}\n\n*Cart Details:*\n${cartText}`;
+    // Your WhatsApp number
+    let phoneNumber = "08169886941";
+    let whatsappURL = `https://wa.me/${2348169886941}?text=${encodeURIComponent(message)}`;
 
-        // Encode the message for URL
-        const encodedMessage = encodeURIComponent(message);
-
-        // Replace '234xxxxxxxxxx' with your actual WhatsApp number in international format
-        const whatsappURL = `https://wa.me/234xxxxxxxxxx?text=${encodedMessage}`;
-
-        // Redirect to WhatsApp (opens WhatsApp chat with pre-filled message)
-        window.open(whatsappURL, "_blank");
-    };
+    // Open WhatsApp with the message
+    window.open(whatsappURL, "_blank");
+});
