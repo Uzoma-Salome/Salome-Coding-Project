@@ -3,108 +3,136 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Luxury_By_Cheche</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Luxury By Cheche</title>
+    <link rel="icon" href="background image.png" type="image/png">
+    <link rel="stylesheet" href="stylebk.css">
 </head>
 <body>
-    <div class="overlay">
-    <div class="content">
-    <!--This is the Header-->
-    <header>
+    <!-- Navigation Bar -->
     <nav class="navbar">
-        <!-- Three lines -->
-        <div class="menu-toggle" id="mobile-menu">☰</div> 
-
-        <!-- Logo Image -->
-         <div class="logo">
-        <img src="Logo design.jpg" alt="My Logo"  width="70px" height="70px">
-         </div>
-
-        <!--Cart Icon-->
+        <div class="menu-toggle" id="mobile-menu">☰</div>
+        <!-- Logo -->
+        <div class="logo">
+            <img src="Logo design.jpg" alt="Luxury_By_Cheche Logo">
+        </div>
         <a href="cart.html">
             <div class="cart" id="cart-icon">
-                <img src="cart image.jpg" alt="Cart" class="cart-img">
+                🛒
+                <span id="cart-count">0</span>
+            </div>
         </a>
-            <span id="cart-count">0</span>
-        </div>
-        
-
-        <ul class="nav-list">...
-            <li><a href="index.html">Home</a></li>
+    </nav>
+    <!-- Sidebar Menu (Hidden by default) -->
+    <div class="sidebar" id="sidebar">
+        <ul class="nav-links">
+            <li><a href="homepage.html">Home</a></li>
             <li><a href="about us.html">About</a></li>
-            <li><a href="shop.html">Services</a></li>
+            <li><a href="shop.html">Shop</a></li>
             <li><a href="contact.html">Contact</a></li>
         </ul>
-    </nav>
-    </header>
-    <section class="products">
-        <h2>Oil Perfumes</h2>
-    
-    <div class="product" data-id="1" data-name="100ml Oil Perfume" data-price="12000">
-        <img src="oil-perfume-100ml.jpg" alt="100ml Oil Perfume">
-         <h3>100ml Oil Perfume</h3>
-         <p>₦12,000</p>
-         <button class="add-to-cart" onclick="addToCart(1,'100ml Oil Perfume',12000)">Add to Cart
-         </button>
     </div>
-
-    <div class="product" data-id="2" data-name="50ml Oil Perfume" data-price="7000">
-        <img src="oil-perfume-50ml.jpg" alt="50ml Oil Perfume">
-        <h3>50ml Oil Perfume</h3>
-        <p>₦7,000</p>
-        <button class="add-to-cart" onclick="addToCart(2,'50ml Oil Perfume',7000)">Add to Cart
-        </button>
-    </div>
-    
-    <div class="product" data-id="3" data-name="30ml Oil Perfume" data-price="5000">
-            <img src="oil-perfume-30ml.jpg" alt="30ml Oil Perfume">
-            <h3>30ml Oil Perfume</h3>
-            <p>₦5,000</p>
-            <button class="add-to-cart" onclick="addToCart(3, '30ml Oil Perfume', 5000)">Add to Cart</button>
-        </div>
-    
-        <div class="product" data-id="4" data-name="20ml Oil Perfume" data-price="4000">
-            <img src="oil-perfume-20ml.jpg" alt="20ml Oil Perfume">
-            <h3>20ml Oil Perfume</h3>
-            <p>₦4,000</p>
-            <button class="add-to-cart" onclick="addToCart(4, '20ml Oil Perfume', 4000)">Add to Cart</button>
-        </div>
-    
-        <div class="product" data-id="5" data-name="10ml Roll-on Oil Perfume" data-price="3000">
-            <img src="oil-perfume-10ml-rollon.jpg" alt="10ml Roll-on Oil Perfume">
-            <h3>10ml Roll-on Oil Perfume</h3>
-            <p>₦3,000</p>
-            <button class="add-to-cart" onclick="addToCart(5, '10ml Roll-on Oil Perfume', 3000)">Add to Cart</button>
-        </div>
-    
-        <div class="product" data-id="6" data-name="10ml Spray Oil Perfume" data-price="3000">
-            <img src="oil-perfume-10ml-spray.jpg" alt="10ml Spray Oil Perfume">
-            <h3>10ml Spray Oil Perfume</h3>
-            <p>₦3,000</p>
-            <button class="add-to-cart" onclick="addToCart(6, '10ml Spray Oil Perfume', 3000)">Add to Cart</button>
-        </div>
-    
-        <div class="product" data-id="7" data-name="8ml Oil Perfume" data-price="2500">
-            <img src="oil-perfume-8ml.jpg" alt="8ml Oil Perfume">
-            <h3>8ml Oil Perfume</h3>
-            <p>₦2,500</p>
-            <button class="add-to-cart" onclick="addToCart(7, '8ml Oil Perfume', 2500)">Add to Cart</button>
-        </div>
-    
-        <div class="product" data-id="8" data-name="6ml Oil Perfume" data-price="2000">
-            <img src="oil-perfume-6ml.jpg" alt="6ml Oil Perfume">
-            <h3>6ml Oil Perfume</h3>
-            <p>₦2,000</p>
-            <button class="add-to-cart" onclick="addToCart(8, '6ml Oil Perfume', 2000)">Add to Cart</button>
-        </div>
-    
-        <div class="product" data-id="9" data-name="3ml Oil Perfume (6pcs)" data-price="5000">
-            <img src="oil-perfume-3ml.jpg" alt="3ml Oil Perfume">
-            <h3>3ml Oil Perfume (6pcs)</h3>
-            <p>₦5,000</p>
-            <button class="add-to-cart" onclick="addToCart(9, '3ml Oil Perfume (6pcs)', 5000)">Add to Cart</button>
-        </div>
-    </section>      
-    <script src="script.js"></script>
+    <main>
+        <!-- Product Section -->
+        <section class="products">
+            <h2 id="our">Our Products</h2>
+        </section>
+        <section class="products">
+            <h2>Oil Perfumes</h2>
+            <div class="product" data-id="1" data-name="100ml Oil Perfume" data-price="12000">
+                <img src="100mls oil perfume img1.jpg" alt="100ml Oil Perfume">
+                <h3>100ml Oil Perfume</h3>
+                <p>₦12,000</p>
+                <button class="add-to-cart" onclick="addToCart(1,'100ml Oil Perfume',12000)">Add to Cart</button>
+            </div>
+            <div class="product" data-id="2" data-name="50ml Oil Perfume" data-price="7000">
+                <img src="50mls oil perfume img1.jpg" alt="50ml Oil Perfume">
+                <h3>50ml Oil Perfume</h3>
+                <p>₦7,000</p>
+                <button class="add-to-cart" onclick="addToCart(2,'50ml Oil Perfume',7000)">Add to Cart</button>
+            </div>
+            <!-- More products... -->
+        </section>
+        <section class="products">
+            <h2>Body Sprays & Mists</h2>
+            <div class="product">
+                <img src="images/victoria-secret.jpg" alt="Victoria Secret">
+                <h3>Victoria Secret</h3>
+                <p>₦Price</p>
+                <button onclick="addToCart(2, 'Victoria Secret', Price)">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="images/dear-body.jpg" alt="Dear Body">
+                <h3>Dear Body</h3>
+                <p>₦Price</p>
+                <button onclick="addToCart(3, 'Dear Body', Price)">Add to Cart</button>
+            </div>
+            <!-- More products... -->
+        </section>
+        <section class="products">
+            <h2>Perfumes and Perfume Combos</h2>
+            <div class="product">
+                <img src="images/mousuf.jpg" alt="Mousuf">
+                <h3>Mousuf</h3>
+                <p>₦ Price</p>
+                <button onclick="addToCart(201, 'Mousuf', Price)">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="images/creed aventus.jpg" alt="Creed Aventus">
+                <h3>Creed Aventus Copy</h3>
+                <p>₦ Price</p>
+                <button onclick="addToCart(202, 'Creed Aventus Copy', Price)">Add to Cart</button>
+            </div>
+            <!-- More products... -->
+        </section>
+        <section class="products">
+            <h2>Home and Car Diffusers</h2>
+            <div class="product">
+                <img src="images/home-diffuser1.jpg" alt="Home Diffuser 1">
+                <h3>Luxury Home Diffuser</h3>
+                <p>₦XX,XXX</p>
+                <button onclick="addToCart(13, 'Luxury Home Diffuser', XX,XXX)">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="images/car-diffuser1.jpg" alt="Car Diffuser 1">
+                <h3>Car Vent Diffuser</h3>
+                <p>₦XX,XXX</p>
+                <button onclick="addToCart(14, 'Car Vent Diffuser', XX,XXX)">Add to Cart</button>
+            </div>
+            <!-- More products... -->
+        </section>
+        <section class="products">
+            <h2>Luxury Wristwatches</h2>
+            <div class="product">
+                <img src="images/rolex.jpg" alt="Rolex Watch">
+                <h3>Rolex</h3>
+                <p>₦XXX,XXX</p>
+                <button onclick="addToCart(16, 'Rolex', XXX,XXX)">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="images/patek.jpg" alt="Patek Philippe">
+                <h3>Patek Philippe</h3>
+                <p>₦XXX,XXX</p>
+                <button onclick="addToCart(17, 'Patek Philippe', XXX,XXX)">Add to Cart</button>
+            </div>
+            <!-- More products... -->
+        </section>
+        <section class="products">
+            <h2>Affordable Wristwatches & Watch Sets</h2>
+            <div class="product">
+                <img src="images/simple-watch.jpg" alt="Simple Elegant Watch">
+                <h3>Simple Elegant Watch</h3>
+                <p>₦XX,XXX</p>
+                <button onclick="addToCart(21, 'Simple Elegant Watch', XX,XXX)">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="images/men-watch-set.jpg" alt="Men's Classic Watch Set">
+                <h3>Men's Classic Watch Set</h3>
+                <p>₦XX,XXX</p>
+                <button onclick="addToCart(22, 'Men\'s Classic Watch Set', XX,XXX)">Add to Cart</button>
+            </div>
+            <!-- More products... -->
+        </section>
+    </main>
+    <script src="scriptbk2.js"></script>
 </body>
 </html>
