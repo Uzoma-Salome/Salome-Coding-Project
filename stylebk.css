@@ -172,8 +172,10 @@ body::before {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 20px 0;
-    padding: 0;
+    margin: 20px ;
+    padding: 20px ;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .products h2 {
@@ -185,18 +187,45 @@ body::before {
 .product {
     background: white;
     padding: 15px;
-    border-radius: 10px;
+    border-radius: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
     margin-bottom: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
 }
 
 .product img {
-    width: 100%;
-    max-width: 180px;
+    width: 150%;
+    max-width: 150px;
     height: auto;
     margin-bottom: 10px;
 }
+/* Product Grid Layout */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px; /* Space between grid items */
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+.product:hover {
+    transform: translateY(-5px); /* Slight lift on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
+}
+
+.product h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.product p {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
 .product button {
     background: #ff5733;
     color: white;
