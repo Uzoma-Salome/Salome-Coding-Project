@@ -77,8 +77,8 @@ document.getElementById("checkout-btn").addEventListener("click", function () {
     message += `\n\nTotal: ₦${total}`;
 
     // Your WhatsApp number
-    let phoneNumber = "08169886941";
-    let whatsappURL = `https://wa.me/${2348169886941}?text=${encodeURIComponent(message)}`;
+    let phoneNumber = "09032197264";
+    let whatsappURL = `https://wa.me/${2349032197264}?text=${encodeURIComponent(message)}`;
 
     // Open WhatsApp with the message
     window.open(whatsappURL, "_blank");
