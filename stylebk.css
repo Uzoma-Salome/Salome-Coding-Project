@@ -321,15 +321,15 @@ body::before {
 }
 
 .about-page ul {
-    list-style-type:disc;
-    padding: 20px;
-}
+        padding: 20px;
 
+}
 .about-page ul li {
     background: url('checkmark-icon.png') no-repeat left center;
     padding-left: 30px;
     font-size: 18px;
     color: black;
+    text-align: left;
 }
 .contact-page {
     padding: 40px;
