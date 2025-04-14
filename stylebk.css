@@ -40,8 +40,8 @@ body::before {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: #333;
-    color: white;
+    background-color:#444;
+    color:gold;
     padding: 15px;
     position: fixed;
     width: 100%;
@@ -50,8 +50,9 @@ body::before {
 }
 
 .menu-toggle {
-    font-size: 24px;
+    font-size: 40px;
     cursor: pointer;
+
 }
 
 .cart-icon {
@@ -107,7 +108,7 @@ body::before {
 }
 
 .nav-links a:hover {
-    background: #ffcc00;
+    background: gold;
     color: black;
 }
 .cart-container {
@@ -158,7 +159,7 @@ body::before {
 }
 
 #cart-count {
-    background: red;
+    background:gold;
     color: white;
     font-size: 18px; /* Make the count text bigger */
     font-weight: bold;
@@ -346,7 +347,7 @@ body::before {
 
 .contact-page p {
     font-size: 18px;
-    color: #7f8c8d;
+    color:black;
     margin-bottom: 20px;
 }
 
@@ -357,7 +358,7 @@ form {
 
 form label {
     font-size: 16px;
-    color: #2c3e50;
+    color: rgb(75, 74, 74);
     margin-bottom: 5px;
 }
 
@@ -385,14 +386,37 @@ form button:hover {
 .h1{
     font-size:60px;
     font-style: italic;
-    color: goldenrod;
+    color: gold;
 }
+.h2{
+    color: gold;
+}
+.info-section {
+    background-color: #ffffff;  /* white background */
+    color:black;
+    padding: 30px 20px;
+    text-align:left;
+    font-size:small;
+    font-style: normal;
+  }
+  .info-section p{
+        margin-top: 20px;
+        margin-bottom: 20px;
+  }
+  .info-section .logo {
+    max-width: 200px;
+    margin-bottom: 20px;
+  }
+  
+  .contact-info {
+    margin-top: 20px;
+  }
 /* Footer Styles */
 footer {
     text-align: center;
     padding: 15px;
-    background-color:black;
-    color: white;
+    background-color:#444;
+    color:gold;
     position: relative;
     bottom: 0;
     width: 100%;

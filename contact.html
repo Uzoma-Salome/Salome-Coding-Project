@@ -9,19 +9,23 @@
 </head>
 <body>
   <header>
-    <h1>Contact Us</h1>
+    <nav class="navbar">
+      <a href="homepage.html" class="back-home"> RETURN TO SHOP</a>
+      <h2>Contact Us</h2>
+  </nav>
+   <h1 class="h1">CONTACT US</h1>
   </header>
 
   <main class="contact-page">
     <section>
       <p>We'd love to hear from you! Send us a message or reach out on our socials:</p>
 
-      <form>
-        <input type="text" placeholder="Your Name" required />
-        <input type="email" placeholder="Your Email" required />
-        <textarea placeholder="Your Message" required></textarea>
+      <form action="https://formsubmit.co/uzomasalome2003@gmail.com" method="POST">
+        <input type="text" name="name" required placeholder="Your Name">
+        <input type="email" name="email" required placeholder="Your Email">
+        <textarea name="message" required placeholder="Your Message"></textarea>
         <button type="submit">Send</button>
-      </form>
+      </form>      
 
       <div class="contact-info">
         <p>Email: uzomasalome2003@gmail.com</p>
@@ -35,11 +39,26 @@
       </div>
     </section>
   </main>
-    
-    <footer>
+  <section class="info-section">
+    <div>
+      <img src="Logo design.jpg" alt="Logo" class="logo" width="70px" height="70px">
+      <h3>Welcome to Luxury_By_Cheche Online</h3>
+      <p>At Luxury_By_Cheche Online — where bold scents meet bold style.<br>
+         Perfumes, wristwatches & accessories<br> that make a statement.</p>
+  
+      <div class="contact-info">
+        <p> 4, Edith Bedel Street, Jakande Gate, Isolo, Lagos.</p>
+
+        <p> 09166806368.</p>
+
+        <p><a href="mailto:uzomasalome2003@gmail.com">info@luxury_by_cheche.com</a></p>
+      </div>
+    </div>
+  </section> 
+  <footer>
         <p>
             &copy;Luxury_By_Cheche 2025.All rights reserved.Designed by Uzoma Salome.
         </p>
-    </footer>
+  </footer>
 </body>
 </html>
