@@ -14,9 +14,12 @@ Luxury by Cheche is an e-commerce platform that offers premium and affordable li
 ## Features
 ![alt text](image-1.png)
 - **Home Page**: Discover featured products and explore curated collections.
+![alt text](image-4.png)
 - **Cart Persistence**: Add items to your cart, and they’ll remain there even if you refresh the page.
 - **Quick Checkout**: A streamlined checkout process for hassle-free purchases.
+![alt text](image-5.png)
 - **Contact Page**: Reach out to us for inquiries or support.
+![alt text](image-3.png)
 - **About Us**: Learn more about our mission and values.
 
 ## Technologies Used
