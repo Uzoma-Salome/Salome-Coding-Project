@@ -14,6 +14,9 @@ body {
     background-attachment: fixed; /* Keeps the background in place when scrolling */
     background-repeat: repeat; /* Prevents the image from repeating */
 }
+.cart{
+    margin: 40px;
+}
 .overlay {
     position: fixed;
     top: 0;
