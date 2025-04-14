@@ -241,8 +241,7 @@ body::before {
     background: #e04d2a;
 }
 .remove-btn {
-    background: red;
-    color: white;
+    background-color:transparent;
     border: none;
     padding: 5px 10px;
     margin-left: 10px;
