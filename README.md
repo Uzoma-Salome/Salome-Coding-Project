@@ -31,7 +31,7 @@ To run this website locally, follow these steps:
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/luxury-by-cheche.git
+   git clone https://github.com/Uzoma-Salome/Salome-Coding-Project.git
 
 ## Usage
 1. Visit the website at Luxury by Cheche .
