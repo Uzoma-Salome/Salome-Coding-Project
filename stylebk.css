@@ -410,6 +410,10 @@ form button:hover {
   .contact-info {
     margin-top: 20px;
   }
+.rts{
+    color: gold;
+    list-style-type: none;
+  }
 /* Footer Styles */
 footer {
     text-align: center;
