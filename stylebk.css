@@ -12,7 +12,7 @@ body {
     text-align: center;
     padding-top: 60px;
 /* Background Image */
-    background-image: url('background\ image.png'); /* Ensure the image is correctly named */
+    background-image: url('background\ img.png'); /* Ensure the image is correctly named */
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -25,7 +25,7 @@ body::before {
     left: 0;
     width: 100%;
     height: 100%;
-    background: url('background\ image.png') center/cover fixed no-repeat;
+    background: url('background\ img.png') center/cover fixed no-repeat;
     filter: blur(8px); /* Blur only the background */
     z-index: -1; /* Keeps it behind everything */
 }
@@ -187,7 +187,7 @@ body::before {
 }
 .product {
     background: white;
-    padding: 15px;
+    padding: 10px;
     border-radius: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
@@ -196,16 +196,16 @@ body::before {
 }
 
 .product img {
-    width: 200%;
-    max-width: 70%;
-    height: auto;
+    width: 300px; 
+    height: 280px; 
+    object-fit: cover;
     margin-bottom: 10px;
 }
 /* Product Grid Layout */
 .product-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 30px; /* Space between grid items */
+    gap: 40px; /* Space between grid items */
     margin: 0;
     padding: 0;
     width: 100%;
@@ -223,7 +223,7 @@ body::before {
 
 @media (max-width: 768px) {
     .product-grid {
-        grid-template-columns: 1fr; /* Single column on mobile */
+        grid-template-columns: repeat(2, 1fr); /* 2 columns on mobile */
     }
 }
 .product h3 {
@@ -433,4 +433,77 @@ footer {
     position: relative;
     bottom: 0;
     width: 100%;
+}
+/* Mobile Responsive Adjustments */
+@media (max-width: 768px) {
+    body {
+        padding-top: 70px;
+    }
+
+    .navbar {
+        flex-direction: row; /* Keep it horizontal */
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .menu-toggle {
+        font-size: 30px;
+    }
+
+    .cart {
+        font-size: 30px;
+        top: auto;
+        right: auto;
+        transform: none;
+        position: relative;
+        margin-left: 10px;
+    }
+
+    .product-grid {
+        grid-template-columns: 2fr; /* 1 column for mobile */
+        gap: 20px;
+    }
+
+    .product img {
+        max-width: 100%;
+    }
+
+    .products {
+        padding: 10px;
+    }
+
+    .sidebar {
+        width: 70%;
+        border-radius: 0 10px 10px 0;
+    }
+
+    .contact-page,
+    .about-page {
+        padding: 20px;
+        margin: 10px;
+    }
+
+    .contact-page form,
+    .about-page {
+        width: 100%;
+    }
+
+    main {
+        padding: 2rem 1rem;
+    }
+
+    .h1 {
+        font-size: 40px;
+    }
+
+    .cart-container {
+        width: 90%;
+        padding: 10px;
+    }
+
+    footer {
+        font-size: 14px;
+        padding: 10px;
+    }
 }
