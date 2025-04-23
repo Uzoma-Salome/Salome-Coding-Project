@@ -196,8 +196,8 @@ body::before {
 }
 
 .product img {
-    width: 150%;
-    max-width: 150px;
+    width: 200%;
+    max-width: 70%;
     height: auto;
     margin-bottom: 10px;
 }
