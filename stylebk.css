@@ -10,7 +10,7 @@ header {
 }
 body {
     text-align: center;
-    padding-top: 60px;
+    padding-top: 90px;
 /* Background Image */
     background-image: url('background\ img.png'); /* Ensure the image is correctly named */
     background-size: cover;
@@ -350,8 +350,9 @@ body::before {
 }
 
 .contact-page h1 {
-    font-size: 28px;
-    color: #2c3e50;
+    font-size: 60px;
+    font-style: italic;
+    color: black;
 }
 
 .contact-page p {
@@ -393,11 +394,16 @@ form button:hover {
     background-color: #34495e;
 }
 .h1{
-    font-size:60px;
+    font-size: 60px;
     font-style: italic;
     color: black;
 }
 .h2{
+    color: gold;
+}
+.h1HS{
+    font-size: 60px;
+    font-style: italic;
     color: gold;
 }
 .info-section {
